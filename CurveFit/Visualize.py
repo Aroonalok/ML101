@@ -24,7 +24,11 @@ class Animator:
     def animate(self,i):
         self.line.set_data(self.X, self.Y[i])
         self.degree_text.set_text('Degree = {}'.format(i))
-        self.error_text.set_text('Error = {}'.format(self.err[i][0]))
+        error = self.err[i]
+        if error.size == 0:
+            self.error_text.set_text('Error = {}'.format(0))
+        else:
+            self.error_text.set_text('Error = {}'.format(error[0]))
         return self.line, self.degree_text, self.error_text
 
     def visualize_data(self,x_in,fx_in,x_out,y_out,error):

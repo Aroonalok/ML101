@@ -5,5 +5,5 @@
 
 **Output GIF** 
 
-![curve_fit](https://user-images.githubusercontent.com/6133914/53745213-94a71200-3ec4-11e9-92e8-f46df8b5ea57.gif)
+![curve_fit](https://user-images.githubusercontent.com/6133914/53752967-13f11180-3ed6-11e9-904b-8ef20f2fa757.gif)
     

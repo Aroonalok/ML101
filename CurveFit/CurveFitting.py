@@ -20,13 +20,12 @@ def fit_curve(x,y,deg=1):
 if __name__ == "__main__":
     x, fx = get_function()
 
-    fit_results = [fit_curve(x,fx,d) for d in range(30)]
-
     interval = np.ptp(x)
+    X = np.arange(x[0]-interval, x[-1]+interval)
 
-    X = np.arange(x[0]-interval,x[-1]+interval)
-    Y = np.c_[[poly(X) for poly,err in fit_results]]
-    err = np.c_[[err for poly,err in fit_results]]
+    fit_results = [fit_curve(x,fx,d) for d in range(30)]
+    poly, err = map(list, zip(*fit_results))
+    Y = np.array([p(X) for p in poly])
 
     viewer = Animator(X_MIN=min(min(X),min(x)), X_MAX=max(max(X),max(x)), Y_MIN=1.5*min(fx), Y_MAX=1.5*max(fx))
     viewer.visualize_data(x,fx,X,Y,err)
