@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 from matplotlib import animation
-
+import os
 
 class Animator:
     def __init__(self,X_MIN,X_MAX,Y_MIN,Y_MAX):
@@ -35,5 +35,6 @@ class Animator:
         degrees,_ = y_out.shape
         anim = animation.FuncAnimation(self.fig, self.animate, init_func=self.init_frame,
                                        frames=degrees, interval=1000, blit=True)
-        anim.save('basic_animation.mp4', fps=30, extra_args=['-vcodec', 'libx264'])
+        dir_path = os.path.dirname(os.path.realpath(__file__))
+        anim.save('{}/curve_fit.gif'.format(dir_path), dpi=80, writer='imagemagick', fps = 30)
         plt.show()
