@@ -1,3 +1,6 @@
 #Project Metadata
 .idea
 __pycache__
+
+#Output Files
+*.mp4
