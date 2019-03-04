@@ -1,6 +1,11 @@
 #Project Metadata
 .idea
+
+#Bytecode files
 __pycache__
+
+#Local Shell scripts
+*.sh
 
 #Output Files
 *.gif
