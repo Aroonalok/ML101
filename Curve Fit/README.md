@@ -4,4 +4,4 @@
 2. `sudo apt install imagemagick` if you haven't already
 3. Output GIF : 
     
-    ![curve_fit](https://user-images.githubusercontent.com/6133914/53744776-b358d900-3ec3-11e9-93c3-074fea9282d1.gif)
+    ![curve_fit](https://user-images.githubusercontent.com/6133914/53745213-94a71200-3ec4-11e9-92e8-f46df8b5ea57.gif)
