@@ -36,5 +36,5 @@ class Animator:
         anim = animation.FuncAnimation(self.fig, self.animate, init_func=self.init_frame,
                                        frames=degrees, interval=1000, blit=True)
         dir_path = os.path.dirname(os.path.realpath(__file__))
-        anim.save('{}/curve_fit.gif'.format(dir_path), dpi=80, writer='imagemagick', fps = 30)
+        anim.save('{}/curve_fit.gif'.format(dir_path), dpi=80, writer='imagemagick', fps = 1)
         plt.show()
